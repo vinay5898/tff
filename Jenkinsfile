@@ -12,17 +12,17 @@ pipeline {
         }
         stage ("terraform init") {
             steps {
-                sh 'terraform init'
+                sh 'sudo terraform init'
             }
         }
         stage ("terrafrom plan") {
             steps {
-                sh 'terraform plan '
+                sh 'sudo terraform plan '
             }
         }
         stage ("terraform apply") {
             steps {
-                sh 'terraform apply --auto-approve'
+                sh 'sudo terraform apply --auto-approve'
             }
         }
     }
